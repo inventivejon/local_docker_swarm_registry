@@ -8,3 +8,7 @@ You can use it by calling the script StartRegistry.sh
 You can stop it by calling StopRegistry.sh
 
 >> sudo ./StopRegistry.sh
+
+You can call and use the registry from all connected docker swarm nodes from the docker swarm you deployed to.
+
+>> curl localhost:5001/v2/_catalog
