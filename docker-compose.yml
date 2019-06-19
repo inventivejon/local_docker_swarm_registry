@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  auth:
+    build: ./nginx
+    image: aussume_nginx_auth
+    ports:
+      - 5001:80
+    links:
+      - registry
+    environment:
+      USER: "<YourUserName>"
+      PASS: "<YourPassword>"
+    # depends_on:
+    #   - registry
+
+  registry:
+    image: registry:latest
+
