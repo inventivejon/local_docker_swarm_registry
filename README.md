@@ -11,4 +11,6 @@ You can stop it by calling StopRegistry.sh
 
 You can call and use the registry from all connected docker swarm nodes from the docker swarm you deployed to.
 
->> curl localhost:5001/v2/_catalog
+>> curl 127.0.0.1:5001/v2/_catalog
+
+and PLEASE don't use localhost instead. Will not work.
