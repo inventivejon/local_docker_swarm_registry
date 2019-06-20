@@ -5,13 +5,13 @@ RUN apt-get update -y \
         apache2-utils \
     && rm -rf /var/lib/apt/lists/*
 
-ENV FORWARD_PORT=80
+ENV FORWARD_PORT=5000
 
 WORKDIR /opt
 
 #RUN apk add --no-cache gettext
 
-COPY auth.conf auth.htpasswd launch.sh ./
+COPY nginx.conf auth.conf launch.sh ./
 
 RUN chmod 0755 ./launch.sh
 
