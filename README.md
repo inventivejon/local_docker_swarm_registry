@@ -1,6 +1,9 @@
 # local_docker_swarm_registry
 Docker Registry for use in docker-swarm with nginx as proxy to only allow from server_name localhost and deny all other
 
+Before you start:
+Replace in docker-compose.yml file <YourUsername> wit a username and <YourPassword> with a password. You will not need it in operation. It is only for internal security.
+
 You can use it by calling the script StartRegistry.sh
 
 >> sudo ./StartRegistry.sh
